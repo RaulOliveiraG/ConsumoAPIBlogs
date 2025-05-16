@@ -1,0 +1,158 @@
+:root {
+    --cor: #536dfe;
+    --background: #fafafa;
+    --text: #222;
+    --border: #e0e0e0;
+    --card-bg: #fff;
+    --shadow: 0 2px 18px 0 rgba(80,90,173,0.04);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    background: var(--cor);
+    color: #fff;
+    padding: 48px 0 32px 0;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+main {
+    min-height: 60vh;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card img {
+    padding: 15px;
+    width: 100%;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card-body {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-title {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.card-text {
+    flex-grow: 1;
+    margin-bottom: 16px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--cor);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor);
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #222;
+}
+
+.btn-secondary:hover {
+    background-color: #bbb;
+}
+
+.article {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 24px 32px;
+}
+
+.article img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+footer {
+    background: #f4f4f4;
+    padding: 24px 0;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1.5px solid var(--border);
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 24px 8px;
+    }
+    .container {
+        padding: 0 8px;
+    }
+}
