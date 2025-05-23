@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" ng-app="blogApp">
 <head>
   <meta charset="UTF-8">
   <title>Blog do Ensino Médio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
   <header>
@@ -14,9 +16,22 @@
     </div>
   </header>
 
-  <main class="container">
+  <!--coloco aqui a extruturação dos dados da api dentro do site-->
+  <main class="container" ng-controller="BlogCtrl">
     <section id="posts">
-      <p>Carregando posts...</p>
+      <p ng-if="carregando">Carregando posts...</p>
+      <p ng-if="erro">Não foi possível carregar os posts.</p>
+      <div ng-if="!carregando && !erro">
+        <div class="card" ng-repeat="post in posts">
+          <img ng-src="{{ post.thumbImage || 'https://via.placeholder.com/600x300' }}" alt="{{ post.thumbImageAltText || 'Imagem do Post' }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h6 class="card-subtitle">{{ post.postDate }} • {{ post.profileName }}</h6>
+            <p class="card-text">{{ post.description }}</p>
+            <a class="btn btn-primary" href="post.html?id={{ $index }}">Leia mais</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -25,7 +40,5 @@
       <p>&copy; 2024 Blog do Ensino Médio</p>
     </div>
   </footer>
-  
-  <script src="main.js"></script>
 </body>
 </html>
