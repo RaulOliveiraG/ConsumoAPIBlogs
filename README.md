@@ -52,20 +52,10 @@ Este projeto é o scaffolding inicial de uma API de Blogs. Ele fornece a estrutu
 ## Estrutura do Projeto
 
 gestao-consultas-api/
-├── src/
-│   ├── config/                  # Configurações do projeto
-│   ├── controllers/             # Controladores da API
-│   ├── models/                  # Modelos de dados
-│   ├── routes/                  # Definição das rotas da API
-│   ├── middlewares/             # Middlewares customizados
-│   ├── docs/                    # Configuração do Swagger
-│   └── index.js                 # Ponto de entrada da aplicação
-├── .env                         # Variáveis de ambiente
-├── .env.example                 # Exemplo de variáveis de ambiente
-├── .gitignore                   # Arquivos ignorados pelo Git
-├── .eslintrc.json               # Configuração do ESLint
-├── .prettierrc                  # Configuração do Prettier
-├── package.json                 # Dependências e scripts do projeto
+├── app.js                           # Ponto de entrada da aplicação
+├── index.hml                        # Conteudo da Home
+├── post.hml                         # Conteudo do Post
+├── style.css                        # Estilização
 └── README.md                    # Documentação do projeto
 
 
