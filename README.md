@@ -30,20 +30,10 @@ Este projeto é o scaffolding inicial de uma API de Blogs. Ele fornece a estrutu
    
 3. Instale as dependências:
     npm install express
-    npm install dotenv
-    npm install swagger-jsdoc
-    npm install swagger-ui-express
-    npm install eslint --save-dev
-    npm install prettier --save-dev
-    npm install nodemon --save-dev
     npm install mongodb
-   
-4. Configure o arquivo `.env`:
-   - Renomeie o arquivo `.env.example` para `.env`.
-   - Defina a variável `PORT` no arquivo `.env` (opcional, o padrão é 3000).
 
-5. Inicie o servidor em modo de desenvolvimento:
-   npm run dev
+4. Inicie o servidor:
+   npm start
 
 6. Acesse a API:
    - A rota principal estará disponível em: `http://localhost:3000/api/`.
@@ -70,7 +60,7 @@ gestao-consultas-api/
 
 ## Licença
 
-Este projeto não possui licença.
+Este projeto não possui licenças.
 
 ## Contato
 
